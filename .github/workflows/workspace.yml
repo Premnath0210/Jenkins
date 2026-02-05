@@ -1,0 +1,16 @@
+name: Workspace Demo
+
+on: workflow_dispatch
+
+jobs:
+  workspace-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a file in workspace
+        run: echo "This file is created inside the GitHub Actions workspace" > myfile.txt
+
+      - name: Display file content
+        run: cat myfile.txt
+
+      - name: List workspace files
+        run: ls -l
