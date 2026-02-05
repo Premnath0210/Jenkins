@@ -1,0 +1,16 @@
+name: Auto Trigger on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  auto-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show latest commit
+        run: git log -1 --oneline
