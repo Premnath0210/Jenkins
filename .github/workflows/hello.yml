@@ -1,0 +1,8 @@
+name: Hello Jenkins jobs
+on: workflow_dispatch
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Jenkins
+        run: echo "Hello Jenkins"
