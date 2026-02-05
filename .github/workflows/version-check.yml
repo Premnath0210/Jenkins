@@ -1,7 +1,5 @@
 name: Version Check
-
 on: workflow_dispatch
-
 jobs:
   version-job:
     runs-on: ubuntu-latest
