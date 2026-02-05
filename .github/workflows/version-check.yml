@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show runner version
-        run:
+        run: |
           uname -a
           git --version
-          java-version
+          java -version
