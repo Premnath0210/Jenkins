@@ -1,0 +1,13 @@
+name: Version Check
+
+on: workfkow_dispatch
+
+jobs:
+version-job:
+runs-on: ubuntu-latest
+steps:
+- name: Show runner version
+run:
+uname -a
+git --version
+java-version
