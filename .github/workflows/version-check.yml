@@ -1,6 +1,6 @@
 name: Version Check
 
-on: workfkow_dispatch
+on: workflow_dispatch
 
 jobs:
   version-job:
