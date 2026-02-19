@@ -1,0 +1,16 @@
+name: Parameterized Job
+
+on:
+  workflow_dispatch:
+    inputs:
+      USERNAME:
+        description: "Enter your name"
+        required: true
+        default: "Guest"
+
+jobs:
+  param-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print username
+        run: echo "Hello ${{ github.event.inputs.USERNAME }}"

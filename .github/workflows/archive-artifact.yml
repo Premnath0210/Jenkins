@@ -1,0 +1,25 @@
+name: Archive Artifact
+
+on: workflow_dispatch
+
+jobs:
+  artifact-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile Java program
+        run: javac Hello.java
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-class-file
+          path: Hello.class
